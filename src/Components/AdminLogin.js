@@ -1,6 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react';
 
-export default function AdminLogin({adminLogin}) {
+export default function AdminLogin(props) {
+    const [adminName, setAdminName] = useState("");
+    const [password, setPassword] = useState("");
+
+    const submit = (e) => {
+        e.preventDefault();
+        if(!adminName || !password){
+
+        }else{
+            props.loginAdmin(adminName, password);
+            setAdminName("");
+            setPassword("");
+        }
+    }
     return (
         <div className="container">
             <div className="card o-hidden border-0 shadow-lg my-5">
@@ -11,13 +24,13 @@ export default function AdminLogin({adminLogin}) {
                                 <div className="text-center">
                                     <h1 className="h4 text-gray-900 mb-4">Admin Login</h1>
                                 </div>
-                                <form className="user" action="#" method="post" autoComplete="off">
+                                <form className="user" onSubmit={submit} method="post" autoComplete="off">
                                     <div className="form-group">
-                                        <input type="text" className="form-control form-control-user" id="adminName"
+                                        <input type="text" value={adminName} onChange={(e) => setAdminName(e.target.value)} className="form-control form-control-user" id="adminName"
                                             placeholder="Admin Name" />
                                     </div>
                                     <div className="form-group">
-                                        <input type="password" className="form-control form-control-user"
+                                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control form-control-user"
                                             id="password" placeholder="Password" />
                                     </div>
                                     <div className="form-group">
