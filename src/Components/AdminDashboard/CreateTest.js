@@ -16,7 +16,6 @@ export default function CreateTest(props) {
     const submit = (e) => {
         console.log(testForm);
         e.preventDefault();
-        // setTestForm({ ...testForm, questionList: questions }); 
         props.saveTest(testForm);
     }
 

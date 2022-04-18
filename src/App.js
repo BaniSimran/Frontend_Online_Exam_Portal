@@ -171,6 +171,7 @@ function App() {
       .then(data => {
         if (data.studentId === studentId) {
           alert("Details saved successfully!");
+          setstudentName(data.studentName);
           openProfile();
         } else {
           alert("Please retry, failed to save changes.");

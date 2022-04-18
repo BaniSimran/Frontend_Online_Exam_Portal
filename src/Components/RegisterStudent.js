@@ -32,12 +32,6 @@ export default function RegisterStudent(props) {
         e.preventDefault();
     }
 
-    const imgStyle = {
-            background: "./Resources/register-img.jpg",
-            backgroundPosition: "center",
-            backgroundSize: "cover"
-    }
-
     return (
         <div className="container">
             <div className="card o-hidden border-0 shadow-lg my-5" style={{backgroundColor: 'rgba(255, 255, 255, 0.9)'}}>
