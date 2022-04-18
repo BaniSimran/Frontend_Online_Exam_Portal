@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 export const Main = () => {
     return (
-        <Container className='text-center my-5'>
-            <Card>
-                <Card.Header className='text-center'>
+        <Container className='text-center my-5' >
+            <Card  style={{backgroundColor: 'rgba(255, 255, 255, 0.7)'}}>
+                <Card.Header className='text-center'style={{backgroundColor: 'rgba(255, 255, 255, 0.9)'}}>
                     <h2>Welcome to the Exam Portal!</h2>
                 </Card.Header>
-                <Card.Body className='text-center'>
+                <Card.Body className='text-center' style={{backgroundColor: 'rgba(255, 255, 255, 0.6)'}}>
                     <Row className='p-5'>
                         <Col></Col>
                         <Col>
