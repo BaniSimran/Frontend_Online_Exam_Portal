@@ -182,6 +182,11 @@ function App() {
     navigate('/student-dashboard');
   }
 
+  const openAdminDashboard = () => {
+    navigate('/admin-dashboard');
+  }
+
+
   const availableTest = () => {
     fetch('/portal/all-test-list')
       .then(response => response.json())
@@ -223,7 +228,7 @@ function App() {
   return (
     <>
       <Header title="Online Exam Portal" isLoggedIn={isLoggedIn} isAdmin={isAdmin} logout={logout} studentName={studentName} />
-      <div >
+      <div className="myImg">
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/student-login' element={<StudentLogin loginStudent={loginStudent} />} />
@@ -231,7 +236,7 @@ function App() {
         <Route path='/register-student' element={<RegisterStudent registerStudent={registerStudent} />} />
         <Route path='/student-dashboard' element={<StudentDashboard openProfile={openProfile} availableTest={availableTest} />} />
         <Route path='/admin-dashboard' element={<AdminDashboard createTest={createTest} />} />
-        <Route path='/admin-dashboard/create-new-test' element={<CreateTest adminId={adminId} saveTest={saveTest} />} />
+        <Route path='/admin-dashboard/create-new-test' element={<CreateTest adminId={adminId} saveTest={saveTest} openAdminDashboard={openAdminDashboard}/>} />
         <Route
           path='/student-dashboard/student-profile'
           element={<StudentProfile

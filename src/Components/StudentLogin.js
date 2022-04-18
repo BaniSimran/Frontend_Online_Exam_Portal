@@ -17,8 +17,8 @@ export default function StudentLogin(props) {
     }
 
     return (
-        <div className="container">
-            <div className="card o-hidden border-0 shadow-lg my-5">
+        <div className="container" >
+            <div className="card o-hidden border-0 shadow-lg my-5" style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
                 <div className="card-body p-0">
                     <div className="row">
                         <div className="col-lg-7 mx-auto" align="center">

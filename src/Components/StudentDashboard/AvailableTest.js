@@ -13,7 +13,7 @@ export default function AvailableTest(props) {
 }
 
   return (
-    <Container className='my-5 bg-light pt-2' style={{maxWidth: "100vh"}}>
+    <Container className='my-5 bg-light pt-2' style={{maxWidth: "100vh", overflowY: "scroll", maxHeight:"60vh"}}>
     <button type="button" className="close" onClick={backToDashboard} aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

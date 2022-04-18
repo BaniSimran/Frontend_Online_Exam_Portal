@@ -89,8 +89,13 @@ export default function CreateTest(props) {
         setQuestions(data)
     }
 
+    const openDashboard = (e) => {
+        props.openAdminDashboard();
+        e.preventDefault();
+    }
+
     return (
-        <Container className='my-5'>
+        <Container className='my-5' style={{backgroundColor: 'rgba(255, 255, 255, 0.9)', overflowY: "scroll", maxHeight:"70vh"}}>
             <Form onSubmit={submit}>
                 <Card className='my-3'>
                     <Card.Body>
@@ -202,7 +207,7 @@ export default function CreateTest(props) {
                         <button className="btn btn-primary" type='submit' onClick={submit}>Save Test</button>
                     </Col>
                     <Col>
-                        <button className="btn btn-danger" >Cancel</button>
+                        <button className="btn btn-danger" onClick={openDashboard}>Cancel</button>
                     </Col>
                 </Row>
             </Form>
